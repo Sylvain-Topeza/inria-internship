@@ -300,7 +300,7 @@ def remove_repeats_coeff(dataset, threshold=0.95): # better suited for smaller R
 
 def remove_repeats_block(dataset, threshold=0.95): # better suited for smaller RAM, and faster
         
-    remove_im_mean = lambda data : data - data.mean(dim=(1,2,3),keepdims=True)
+    remove_im_mean = lambda data : data - data.mean(dim=(1,2,3),keepdim=True)
     # downsample the dataset to 20x20 images to save computation
     print('downsampling dataset to 20x20')
     pool = torch.nn.AvgPool2d(int(dataset.shape[2]/20))
@@ -337,4 +337,5 @@ def remove_repeats_block(dataset, threshold=0.95): # better suited for smaller R
     print('removing repeated images')
     print(f"Total number of images to remove : {len(to_remove)}")
     data_cleaned = np.delete(dataset, to_remove, axis = 0)
+
     return data_cleaned
