@@ -1,6 +1,7 @@
 # Generalization in Diffusion Models — Reproduction and Critical Analysis
 
-This repository contains the full code, data pipeline, trained models, results, and report for a student-led research project conducted at **Inria Mokaplan (2025)**.  
+This repository contains the full code, data pipeline, trained models, results, and report for a student-led research project conducted at **Inria Mokaplan (2025)**.
+
 The project reproduces and extends the experiments of:
 
 > **Zahra Kadkhodaie, Florentin Guth, Eero P. Simoncelli, Stéphane Mallat (2024)**  
