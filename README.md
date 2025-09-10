@@ -1,8 +1,7 @@
 # Generalization in Diffusion Models — Reproduction and Critical Analysis
 
-This repository contains the full code, data pipeline, trained models, results, and report for a student-led research project conducted at **Inria Mokaplan (2025)**.
-
-The project reproduces and extends the experiments of:
+This repository contains the full code, notebooks, results, and report for a student-led research project conducted at **Inria Mokaplan (2025)**.  
+It reproduces and extends the experiments of:
 
 > **Zahra Kadkhodaie, Florentin Guth, Eero P. Simoncelli, Stéphane Mallat (2024)**  
 > *Generalization in Diffusion Models Arises from Geometry-Adaptive Harmonic Representations*  
@@ -18,12 +17,12 @@ This project reproduces the main results and contributes three **critical extens
 
 1. **Reproducible pipeline**  
    - Deterministic dataset ordering  
-   - Memory-efficient duplicate removal (reducing RAM from 164GB → 400MB)  
-   - Public release of training tensors and ordering metadata  
+   - Memory-efficient duplicate removal (164GB → 400MB)  
+   - Public release of ordering metadata for full reproducibility  
 
 2. **Metric critique**  
    - Demonstrated that **pixel correlation** misrepresents originality  
-   - Introduced **LPIPS (VGG)** re-ranking, showing that many “novel” generations are actually near-duplicates under perceptual metrics  
+   - Introduced **LPIPS (VGG)** re-ranking to better capture perceptual similarity  
 
 3. **Dataset structure analysis**  
    - Attribute-controlled splits (Eyeglasses, Male/Female)  
@@ -36,11 +35,28 @@ This project reproduces the main results and contributes three **critical extens
 
 - `report/` — full PDF report with methodology, results, discussion  
 - `code/` — preprocessing, training, evaluation scripts (PyTorch)  
-- `datasets/` — CelebA 40×40 tensors with exact ordering metadata  
-- `denoisers/` — trained UNet models across dataset sizes (N=10 … 100k)  
-- `notebooks/` — Jupyter notebooks for reproduction and analysis  
-- `results/` — figures, generated samples, LPIPS re-ranking results  
-- `requirements.txt` — dependencies for Python environment  
+- `datasets/` — deterministic ordering metadata (`train_filenames.txt`, etc.)  
+- `notebooks/` — Jupyter notebooks to reproduce experiments and figures  
+- `results/` — figures used in the report  
+- `requirements.txt` — Python dependencies  
+
+> Preprocessed tensors (.pt) and trained denoisers are hosted externally (see below).
+
+---
+
+## 📦 Data & Models Access
+
+- **Datasets (CelebA 40×40 tensors):** hosted on Hugging Face → [link here]  
+- **Trained denoisers (N=10 … 100k):** hosted on Hugging Face → [link here]  
+- **Ordering metadata (.txt):** included in `datasets/` here on GitHub  
+
+---
+
+## 🔬 Main Findings
+
+- **Replication:** same-noise convergence confirmed at large N.  
+- **Critique:** correlation-based originality is overstated; LPIPS reveals closer matches.  
+- **Extensions:** dataset redundancy strongly influences convergence; it is not a universal property.  
 
 ---
 
@@ -61,3 +77,22 @@ git clone https://github.com/USERNAME/diffusion-generalization-reproduction.git
 cd diffusion-generalization-reproduction
 pip install -r requirements.txt
 ```
+
+---
+
+## 📑 Report
+
+Full report available in `report/report.pdf`.
+
+---
+
+## 📜 License
+
+Released under the **MIT License**.  
+
+---
+
+## 🙋 Acknowledgements
+
+Conducted at **Inria Mokaplan** (2025).  
+Based on the public code and protocol of Kadkhodaie et al. (2024).
