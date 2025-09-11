@@ -1,6 +1,7 @@
 # Generalization in Diffusion Models — Reproduction and Critical Analysis
 
-This repository contains the full code, notebooks, results, and report for a student-led research project conducted at **Inria Mokaplan (2025)**.  
+This repository contains the full code, notebooks, results, and report for a student-led research project conducted at **Inria Mokaplan (2025)**.
+
 It reproduces and extends the experiments of:
 
 > **Zahra Kadkhodaie, Florentin Guth, Eero P. Simoncelli, Stéphane Mallat (2024)**  
@@ -49,14 +50,6 @@ This project reproduces the main results and contributes three **critical extens
 - **Datasets (CelebA 40×40 tensors):** hosted on Hugging Face → [link here]  
 - **Trained denoisers (N=10 … 100k):** hosted on Hugging Face → [link here]  
 - **Ordering metadata (.txt):** included in `datasets/` here on GitHub  
-
----
-
-## 🔬 Main Findings
-
-- **Replication:** same-noise convergence confirmed at large N.  
-- **Critique:** correlation-based originality is overstated; LPIPS reveals closer matches.  
-- **Extensions:** dataset redundancy strongly influences convergence; it is not a universal property.  
 
 ---
 
