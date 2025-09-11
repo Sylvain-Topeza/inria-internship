@@ -1,0 +1,11 @@
+torch
+torchvision
+torchaudio
+scikit-image
+matplotlib
+numpy
+scipy
+Pillow
+PyWavelets
+tensorboard
+tqdm
