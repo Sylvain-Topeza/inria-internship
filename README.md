@@ -1,13 +1,10 @@
 # Generalization in Diffusion Models — Reproduction and Critical Analysis
 
-This repository contains the full code, notebooks, results, and report for a student-led research project conducted at **Inria Mokaplan (2025)**.
-
+This repository archives the research internship project I conducted at **Inria (Mokaplan team), France’s National Institute for Research in Computer Science and Automation (2025)**.  
 It reproduces and extends the experiments of:
 
 > **Zahra Kadkhodaie, Florentin Guth, Eero P. Simoncelli, Stéphane Mallat (2024)**  
 > *Generalization in Diffusion Models Arises from Geometry-Adaptive Harmonic Representations*  
-
----
 
 ## 📖 Overview
 
@@ -30,8 +27,6 @@ This project reproduces the main results and contributes three **critical extens
    - Identity-disjoint splits  
    - Findings: convergence weakens significantly when redundancy is reduced  
 
----
-
 ## 🗂 Repository structure
 
 - `report/` — full PDF report with methodology, results, discussion  
@@ -41,51 +36,44 @@ This project reproduces the main results and contributes three **critical extens
 - `results/` — figures used in the report  
 - `requirements.txt` — Python dependencies  
 
-> Preprocessed tensors (.pt) and trained denoisers are hosted externally (see below).
-
----
+> Preprocessed tensors (.pt) and trained denoisers are hosted externally on Hugging Face.
 
 ## 📦 Data & Models Access
 
-- **Datasets (CelebA 40×40 tensors):** hosted on Hugging Face → [link here]  
-- **Trained denoisers (N=10 … 100k):** hosted on Hugging Face → [link here]  
+- **Datasets (CelebA 40×40 tensors):** [Hugging Face](https://huggingface.co/datasets/Sylvain-Topeza/inria-datasets/tree/main)  
+- **Trained denoisers (N=10 … 100k):** [Hugging Face](https://huggingface.co/Sylvain-Topeza/inria-models/tree/main)
 - **Ordering metadata (.txt):** included in `datasets/` here on GitHub  
 
----
+## 🚀 Quick start
+
+1. Clone the repository and install dependencies from `requirements.txt`.  
+2. Download datasets and models from Hugging Face (links above).  
+3. Run the notebooks in `notebooks/` to reproduce the experiments and figures.  
 
 ## 🔬 Main Findings
 
-- **Replication**: confirmed the original phenomenon — with large N, disjoint denoisers converge to nearly identical score functions.  
-- **Critique**: correlation-based evaluation overstates originality; LPIPS reveals closer matches.  
-- **Extensions**: convergence is not universal; it depends on dataset redundancy (identities, attributes).  
+- **Replication:** confirmed the original phenomenon — with large N, disjoint denoisers converge to nearly identical score functions.  
+- **Critique:** correlation-based evaluation overstates originality; LPIPS reveals closer matches.  
+- **Extensions:** convergence is not universal; it depends on dataset redundancy (identities, attributes).  
 
 ➡️ Generalization in diffusion models arises partly from **inductive biases**, but also heavily from **dataset structure** and **metric choice**.  
-
----
-
-## ⚙️ Installation
-
-```bash
-git clone https://github.com/USERNAME/diffusion-generalization-reproduction.git
-cd diffusion-generalization-reproduction
-pip install -r requirements.txt
-```
-
----
 
 ## 📑 Report
 
 Full report available in `report/report.pdf`.
 
----
+## 📚 Citation
+
+If you use this repository, please cite:
+
+- Topeza, S. (2025). *Memorization vs. Generalization in Diffusion Models with the U-Net Architecture: A Reproduction with Perceptual Metrics and Attribute-Controlled Splits*. Inria Mokaplan.  
+- Kadkhodaie, Z., Guth, F., Simoncelli, E. P., & Mallat, S. (2024). *Generalization in Diffusion Models Arises from Geometry-Adaptive Harmonic Representations*.  
 
 ## 📜 License
 
 Released under the **MIT License**.  
 
----
-
 ## 🙋 Acknowledgements
 
-Conducted at **Inria Mokaplan** (2025).  
+Conducted during a research internship at **Inria (Mokaplan team)** in 2025.  
 Based on the public code and protocol of Kadkhodaie et al. (2024).
