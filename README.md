@@ -1,6 +1,7 @@
 # Generalization in Diffusion Models — Reproduction and Critical Analysis
 
-This repository archives the research internship project I conducted at **Inria (Mokaplan team), France’s National Institute for Research in Computer Science and Automation (2025)**.  
+This repository archives the research internship project I conducted at **Inria (Mokaplan team), France’s National Institute for Research in Computer Science (2025)**.  
+
 It reproduces and extends the experiments of:
 
 > **Zahra Kadkhodaie, Florentin Guth, Eero P. Simoncelli, Stéphane Mallat (2024)**  
@@ -11,7 +12,7 @@ It reproduces and extends the experiments of:
 Diffusion models have achieved state-of-the-art sample quality, yet their mechanisms of **generalization** remain debated.  
 Kadkhodaie et al. (2024) reported a surprising finding: two denoisers trained on disjoint subsets of CelebA converged to almost the same function, producing nearly identical generations from the same noise.
 
-This project reproduces the main results and contributes three **critical extensions**:
+This project reproduces the main results and contributes three **extensions**:
 
 1. **Reproducible pipeline**  
    - Deterministic dataset ordering  
@@ -25,7 +26,7 @@ This project reproduces the main results and contributes three **critical extens
 3. **Dataset structure analysis**  
    - Attribute-controlled splits (Eyeglasses, Male/Female)  
    - Identity-disjoint splits  
-   - Findings: convergence weakens significantly when redundancy is reduced  
+   - Findings: convergence weakens when redundancy is reduced  
 
 ## 🗂 Repository structure
 
@@ -57,10 +58,6 @@ This project reproduces the main results and contributes three **critical extens
 - **Extensions:** convergence is not universal; it depends on dataset redundancy (identities, attributes).  
 
 ➡️ Generalization in diffusion models arises partly from **inductive biases**, but also heavily from **dataset structure** and **metric choice**.  
-
-## 📑 Report
-
-Full report available in `report/report.pdf`.
 
 ## 📚 Citation
 
